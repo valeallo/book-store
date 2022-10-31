@@ -4,7 +4,7 @@ import CommentSection from "./CommentSection";
 // . Crea un componente CommentArea e incorporalo nel componente SingleBook. Quando un utente clicca su un SingleBook,
 // il componente CommentArea deve venire renderizzato (suggerimento: puoi usare l’operatore &&).
 
-const SingleBook = ({ product, toggleSelected }) => {
+const SingleBook = ({ product }) => {
   const [isSelected, setSelected] = useState(false);
   const toggleClass = () => {
     setSelected(!isSelected);
@@ -26,9 +26,9 @@ const SingleBook = ({ product, toggleSelected }) => {
           <p>{product.category}</p>
         </div>
       </div>
-      {isSelected && <div>
+      {/* {isSelected && <div>
         <CommentSection product={product}/>
-      </div>}
+      </div>} */}
     </div>
   );
 };
