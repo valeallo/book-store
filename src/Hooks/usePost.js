@@ -1,6 +1,6 @@
-import  { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 
-const useFetch = (url) => {
+const usePost = (url,comment) => {
     const [data, setData] = useState(null)
     const [loading, setLoading] = useState(null)
     const [error, setError] = useState(null)
@@ -16,7 +16,9 @@ const useFetch = (url) => {
                     {
                         headers: {
                             "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MzJmNzJmNjQwYWU2YTAwMTU0ZmJiNDEiLCJpYXQiOjE2NjcwNTY2MDcsImV4cCI6MTY2ODI2NjIwN30.i_7NBaKH0OKFB8EB_GWoXQ9jUpJ9axJKhjOba5RvMRY"
-                            }
+                            },
+                            method: 'POST',
+                            body: JSON.stringify(comment)
                     })
                 const res = await response.json()
                 setData(res)
@@ -34,4 +36,4 @@ const useFetch = (url) => {
     return {data, loading, error}
 }
 
-export default useFetch
+export default usePost
