@@ -40,7 +40,7 @@ const ModalAddComments = ({ book }) => {
     <div className='flex flex-col justify-center items-center mx-auto'>
       <form onSubmit={postComment}>
         <input
-          className='mb-2 p-2 w-fit'
+          className='mb-2 p-2 h-20 w-fit'
           type="text"
           placeholder='Insert your comment'
           onChange={(e) =>
@@ -54,7 +54,7 @@ const ModalAddComments = ({ book }) => {
 
           }>
           <option value="" disabled>
-            Rate this book
+            Rate this
           </option>
           <option value="1">
             1
@@ -74,6 +74,7 @@ const ModalAddComments = ({ book }) => {
         </select>
         <button
           type='submit'
+          className="bg-[#f46f8e] hover:bg-[#fc3d69] text-white font-bold ml-4 py-1 px-1 rounded"
           onChange={(e) =>
             setFormValue({ ...formValue, add: e.target.value })
           }

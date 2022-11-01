@@ -12,8 +12,9 @@ const ModalCommentArea = ({book,closeModal}) => {
                     >
                         X
                     </button>
-                    <ModalAddComments book={book}/>
                     <ModalCommentList book={book} />
+                    <ModalAddComments book={book}/>
+                    
                 </div>
             </div>
         </div>

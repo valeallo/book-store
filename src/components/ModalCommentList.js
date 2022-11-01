@@ -8,19 +8,20 @@ const ModalCommentList = ({ book }) => {
   const { data, loading, error } = useFetch(url)
   return (
     <div className='relative mt-8'>
+      <h1 className='mb-5 border-b-2 w-[270px] border-orange-500'>Comments:</h1>
       {loading && !error && <LoadingIndicator />}
       {!data && !loading && error && <p>Oops qualcosa non è andata a buon fine...</p>}
-      {data && !error && data.map((comment, index) => {
+      {data && !error && data.slice(0,4).map((comment, index) => {
         console.log(comment);
         return (
-          <div key={index} className='flex flex-col '>
-            <div>
+          <div key={index} className='flex flex-col mb-3 w-[270px] bg-white'>
+            <div className='text-xs opacity-75  text-rose-600'>
               {comment.author}
             </div>
             <div>
               {comment.comment}
             </div>
-            <div>
+            <div   className='text-xs opacity-75 '>
               {comment.createdAt.slice(0, 10)}
             </div>
           </div>
