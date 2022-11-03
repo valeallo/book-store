@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import ModalCommentArea from "./ModalCommentArea";
-import CommentIcon from '@mui/icons-material/Comment';
-import CheckTwoToneIcon from '@mui/icons-material/CheckTwoTone';
+import CommentIcon from "@mui/icons-material/Comment";
+import CheckTwoToneIcon from "@mui/icons-material/CheckTwoTone";
 
 const SingleBook = ({ book }) => {
   const [modalCommentArea, setModalCommentArea] = useState(false);
@@ -11,14 +11,12 @@ const SingleBook = ({ book }) => {
   };
   return (
     <div
-
       style={{
         backgroundImage: `url("${book.img}")`,
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
       }}
-
       onClick={() => toggleCard()}
       className="flex flex-col justify-between w-[200px] h-[300px] border rounded-lg shadow-md cursor-pointer"
     >
@@ -31,12 +29,14 @@ const SingleBook = ({ book }) => {
         </button>
 
         <button
-          className={selectedCard? "bg-[#fc3d69] text-white  py-1 px-1 rounded": "opacity-0"}
-          
+          className={
+            selectedCard
+              ? "bg-[#fc3d69] text-white  py-1 px-1 rounded"
+              : "opacity-0"
+          }
         >
           <CheckTwoToneIcon />
         </button>
-
       </div>
 
       <div className="bg-[#ff5e0d]  p-2  bottom-0 rounded-bl-lg rounded-br-lg">
