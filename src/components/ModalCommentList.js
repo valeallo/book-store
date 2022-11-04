@@ -14,14 +14,14 @@ const ModalCommentList = ({ book }) => {
       )}
       {data &&
         !error &&
-        data.slice(0, 4).map((comment, index) => {
+        data.slice(0, 3).map((comment, index) => {
           console.log(comment);
           return (
-            <div key={index} className="flex flex-col mb-3 w-[270px] bg-white">
-              <div className="text-xs opacity-75  text-rose-600">
+            <div key={index} className="flex flex-col p-2 mb-3 w-[270px] bg-white">
+              <div className="text-xs opacity-75 mb-1 text-rose-600">
                 {comment.author}
               </div>
-              <div>{comment.comment}</div>
+              <div className="mb-2">{comment.comment}</div>
               <div className="text-xs opacity-75 ">
                 {comment.createdAt.slice(0, 10)}
               </div>
