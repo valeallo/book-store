@@ -29,10 +29,10 @@ const ModalAddComments = ({ book }) => {
     }
   };
   return (
-    <div className="flex flex-col justify-center items-center mx-auto">
+    <div className="flex flex-col justify-center items-center w-[100%] mx-auto">
       <form onSubmit={postComment} className="flex flex-col justify-center items-center mx-auto">
         <input
-          className="mb-2 p-2 h-20 w-fit"
+          className="mb-2 p-2 h-20 w-[100%]"
           type="text"
           placeholder="Insert your comment"
           onChange={(e) =>
