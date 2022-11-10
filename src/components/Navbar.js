@@ -22,7 +22,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="relative  w-screen">
+    <div className="relative  w-full">
       <div className="flex items-center justify-between flex-wrap  bg-[#FF577F] p-4">
         <div className="flex items-center flex-shrink-0 text-white">
           <div className="">

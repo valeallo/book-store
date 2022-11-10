@@ -2,7 +2,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="flex flex-col  bg-[#FF577F] p-4 text-white justify-between mt-6 ">
+    <footer className="flex flex-col w-full bg-[#FF577F] p-4 text-white justify-between mt-6 ">
       <div className="flex flex-col p-4 justify-evenly">
         <div>
           <ul className="flex flex-row p-4 justify-evenly">

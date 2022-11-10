@@ -4,9 +4,11 @@ import Login from "./Pages/Login";
 import PageNotFound from "./Pages/PageNotFound";
 import BookDetails from "./Pages/BookDetails";
 
+
+
 function App() {
   return (
-    <div className="App overflow-x-hidden">
+    <div className="">
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -16,7 +18,7 @@ function App() {
           <Route path="*" element={<PageNotFound />} />
         </Routes>
       </BrowserRouter>
-    </div>
+      </div>
   );
 }
 

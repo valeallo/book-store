@@ -10,7 +10,7 @@ const Hero = () => {
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
       }}
-      className="w-screen h-96 flex items-center justify-center mb-10 "
+      className="w-full h-96 flex items-center justify-center mb-10 "
     >
       <h1
         style={{ fontFamily: "Brush Script MT" }}
